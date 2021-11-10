@@ -1,7 +1,7 @@
-<%= simple_form_for(@restaurant, html: { class: "container"}) do |f| %>
+<%= simple_form_for(@restaurant, html: { class: "container", id: "new-form"}) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :category, :collection => %w[chinese italian japanese french belgian] %>
+  <%= f.input :category, collection: %w[chinese italian japanese french belgian] %>
   <%= f.input :phone_number %>
   <%= f.button :submit, 'Create Restaurant' %>
 <% end %>

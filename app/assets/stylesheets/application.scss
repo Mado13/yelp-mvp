@@ -55,3 +55,43 @@ body {
   width: 20px;
   height: 20px;
 }
+
+#rest-card {
+  padding-top: 20px;
+  background-position: center;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: 16px;
+}
+
+#new-form {
+  margin-top: 25%;
+}
+
+#new-form input {
+  width: 100%;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+  font-size: 1.25em;
+  transform: scale(1.5);
+}
+
+#form-card {
+  width: 250px;
+}
+
+#form-card input {
+  width: 100%;
+  margin: 4px;
+}
+
+#reviews-table td {
+  padding: 4px;
+}

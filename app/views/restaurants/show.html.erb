@@ -1,15 +1,15 @@
-<div class="container">
+<div id="rest-card" class="container">
   <h1><%= @restaurant.name %></h1>
   <h3><%= @restaurant.phone_number %></h3>
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.category %></p>
-  <%= link_to 'Homepage', restaurants_path %>
-  <%= link_to 'Add A Review!', new_restaurant_review_path(@restaurant) %>
   <br>
   <br>
 </div>
+<br>
+<br>
 
-<h2 class="container">"<%= @restaurant.name %>" Reviews:</h2>
+<h2 class="container" id="reviews-table">"<%= @restaurant.name %>" Reviews:</h2>
 <div class="container">
   <table>
     <thead>
@@ -21,10 +21,22 @@
     <% @restaurant.reviews.each do |review| %>
     <tbody>
       <tr>
+      <td><%= "⭐️" * (review.rating) %></td>
       <td><%= review.content %></td>
-      <td><%= review.rating %></td>
       </tr>
     </tbody>
     <% end %>
   </table>
+  <br>
+  <br>
+</div>
+
+<div class="container" id="form-card">
+  <h2>Add Your Review:</h2>
+  <%= simple_form_for( [@restaurant, @review] ) do |f| %>
+    <%= f.input :rating, collection: [1, 2, 3, 4, 5] %>
+    <%= f.input :content %>
+    <%= f.button :submit, 'Submit your review' %>
+  <% end %>
+  <%= link_to 'Homepage', restaurants_path %>
 </div>
