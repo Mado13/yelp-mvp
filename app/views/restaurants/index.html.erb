@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Restaurnat List:</h1>
+    <table class="show-table">
+      <thead>
+        <tr>
+          <th>Restaurnat name</th>
+          <th>Address</th>
+          <th>Category</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <% @restaurants.each do |rest| %>
+      <tbody>
+        <tr>
+          <td><%= link_to rest.name, restaurant_path(rest) %></td>
+          <td><%= rest.address %></td>
+          <td><%= rest.category %></td>
+          <td><%= rest.phone_number %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%= link_to new_restaurant_path do %>
+      <i class="far fa-plus-square"></i>
+    <% end %>
+</div>

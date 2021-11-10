@@ -3,11 +3,50 @@
 @import "config/colors";
 @import "config/bootstrap_variables";
 
+
 // External libraries
-@import "bootstrap/scss/bootstrap";
+
+// @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  margin: 0 auto;
+}
+
+.container{
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.container table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.show-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    text-align: center;
+    font-size: large;
+}
+
+.show-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    font-size: large;
+    padding-bottom: 20px;
+}
+
+.show-table tbody td, .show-table thead th {
+  padding: 20px;
+}
