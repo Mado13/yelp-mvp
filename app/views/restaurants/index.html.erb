@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Restaurnat List:</h1>
+  <%= link_to new_restaurant_path do %>
+  <i class="far fa-plus-square"></i>
+  <% end %>
     <table class="show-table">
       <thead>
         <tr>
@@ -20,7 +23,4 @@
       <% end %>
       </tbody>
     </table>
-    <%= link_to new_restaurant_path do %>
-      <i class="far fa-plus-square"></i>
-    <% end %>
 </div>
